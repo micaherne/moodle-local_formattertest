@@ -19,3 +19,6 @@ The benefits of this are:
   * complex formats: "{0} resulted in {1,choice,0#no errors|1#single error|1<{1, number} errors}" (nicked from http://stackoverflow.com/questions/2366579/what-is-the-messageformatter-class-in-php-5-3-good-for)
   * simple array data: MessageFormat supports (as above) the use of array indices for replacements. The existing
     Moodle implementation doesn't allow this (there may be a good reason for this - I don't know :) )
+
+## Performance
+As far as I can see, the test for the existing format barely adds any time, and interpolating simple values is comparable in the two systems (where there are a lot of variables to interpolate, the MessageFormat version may actually be faster).
