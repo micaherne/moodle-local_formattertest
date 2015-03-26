@@ -22,3 +22,6 @@ The benefits of this are:
 
 ## Performance
 As far as I can see, the test for the existing format barely adds any time, and interpolating simple values is comparable in the two systems (where there are a lot of variables to interpolate, the MessageFormat version may actually be faster).
+
+## Possible issues
+* if this were to make it into core, either the intl extension would need to be made required rather than recommended, or there would need to be some horrible hack to provide different lang strings when the extension was available ("$string_intl['blah'] = '...')
